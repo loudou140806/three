@@ -1,0 +1,19 @@
+{
+  "urls": {},
+  "charset": "utf-8",
+  "urlBasedCharset": {},
+  "hosts": {},
+  "cache": true,
+  "headers": {},
+  "servlet": "?",
+  "seperator": ",",
+  "filter": {
+    "www.loumingjie.cn/three": "/build"
+    },
+  "engine": {},
+  "dac/tpl": {
+    "define": "KISSY.add",
+    "anonymous": false,
+    "filter": {}
+  }
+}
