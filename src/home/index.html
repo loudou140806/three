@@ -6,9 +6,11 @@
 	<!--#include file="/mods/header.html" -->
 </head>
 <body>
-	<!--#include file="/mods/footer.html" -->
+	<!-- #include file="/mods/footer.html" -->
     <script type="text/javascript">
-    	seajs.use('/home/index');
+    	seajs.use('home/index', function(){
+    		// alert('1');
+    	});
     </script>
 </body>
 </html>

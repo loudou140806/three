@@ -1,7 +1,9 @@
-define('home/index', function(require, exports, moudle){
+define('home/index', function (require, exports, moudle) {
+	console.log(require.resolve('/home/index'));
+	console.log(require.resolve('/camrea/index'));
+	console.log(moudle.uri);
 		var instance = {
 			init: function(){
-				alert(1);
 				//创建渲染器
 				var render = new THREE.WebGLRenderer();
 				//设置canvans的大小为400*300
