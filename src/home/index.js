@@ -1,6 +1,6 @@
 define('home/index', function (require, exports, moudle) {
-	console.log(require.resolve('/home/index'));
-	console.log(require.resolve('/camrea/index'));
+	console.log(require.resolve('home/index'));
+	console.log(require.resolve('camrea/index'));
 	console.log(moudle.uri);
 		var instance = {
 			init: function(){

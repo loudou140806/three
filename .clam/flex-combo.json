@@ -8,7 +8,7 @@
   "servlet": "?",
   "seperator": ",",
   "filter": {
-    "www.loumingjie.cn/three": "/"
+    "www.loumingjie.cn/build": "/"
     },
   "engine": {},
   "dac/tpl": {
