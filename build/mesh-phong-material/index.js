@@ -1,0 +1,3 @@
+
+define('webPath/mesh-phong-material/index',function(require,exports,moudle){var instance={init:function(){var render=new THREE.WebGLRenderer();render.setSize(400,300);document.querySelector('.three').appendChild(render.domElement);render.setClearColor(0x000000);var scene=new THREE.Scene();var camera=new THREE.PerspectiveCamera(45,4/3,1,1000);camera.position.set(-1,1,5);camera.lookAt(new THREE.Vector3(0,0,0));scene.add(camera);var light=new THREE.AmbientLight(0x00ff00);var cube=new THREE.Mesh(new THREE.CubeGeometry(1,1,1),new THREE.MeshPhongMaterial({color:0xff0000}));scene.add(light);scene.add(cube);render.render(scene,camera);}}
+instance.init();exports.index=instance;})

@@ -8,13 +8,9 @@
 <body>
 	<!-- #include file="/mods/footer.html" -->
     <script type="text/javascript">
-    	seajs.use('home/index', function(index){
-    		// console.log(index);
-    		// console.log((/[\t]+/).test(index.index.init));
+    	seajs.use('webPath/plane/index', function(index){
     		console.log((index.index.init + '').match(/[\s\t]+/g));
     		document.querySelector('.code').innerHTML = (index.index.init + '').replace(/[\t]+/g, '');
-    		// var str = '11 									11';
-    		// document.querySelector('.code').innerHTML = str.replace(/\t/, '');
     	});
     </script>
 </body>

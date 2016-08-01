@@ -1,0 +1,3 @@
+
+define('webPath/torus-geometry/index',function(require,exports,moudle){var instance={init:function(){var render=new THREE.WebGLRenderer();var render2=new THREE.WebGLRenderer();render.setSize(400,300);render2.setSize(400,300);document.querySelector('.three').appendChild(render.domElement);render.setClearColor(0x000000);render.setClearColor(0x000000);var scene=new THREE.Scene();var camera=new THREE.PerspectiveCamera(60,4/3,1,100);camera.position.set(-3,0,10);camera.lookAt(new THREE.Vector3(0,0,0));scene.add(camera);var cube=new THREE.Mesh(new THREE.TorusGeometry(3,1,12,18),new THREE.MeshBasicMaterial({color:0xff0000,wireframe:true}));scene.add(cube);render.render(scene,camera);}}
+instance.init();exports.index=instance;})

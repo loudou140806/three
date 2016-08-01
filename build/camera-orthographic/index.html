@@ -8,7 +8,9 @@
 <body>
 	<!--#include file="/mods/footer.html" -->
     <script type="text/javascript">
-    	seajs.use('camera-orthographic/index');
+    	seajs.use('camera-orthographic/index', function(index){
+    		document.querySelector('.code').innerHTML = (index.index.init + '').replace(/[\t]+/g, '');
+    	});
     </script>
 </body>
 </html>
