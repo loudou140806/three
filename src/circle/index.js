@@ -1,7 +1,4 @@
-define('home/index', function (require, exports, moudle) {
-	console.log(require.resolve('home/index'));
-	console.log(require.resolve('camrea/index'));
-	console.log(moudle.uri);
+define('webPath/circle/index', function (require, exports, moudle) {
 		var instance = {
 			init: function(){
 				//创建渲染器
@@ -15,14 +12,18 @@ define('home/index', function (require, exports, moudle) {
 				//创建场景
 				var scene = new THREE.Scene();
 				//创建照相机
-				var camera = new THREE.PerspectiveCamera( 45, 4 / 3, 1, 1000 );
+				// var camera = new THREE.PerspectiveCamera( 45, 4 / 3, 1, 1000 );
+				var camera = new THREE.OrthographicCamera( -4, 4, 3, -3, 1, 10);
 				camera.position.set(0, 0, 5);
+				camera.lookAt(new THREE.Vector3( 0, 0, 0 ));
 				scene.add(camera);
 
-				//创建长方体
-				var cube = new THREE.Mesh( new THREE.CubeGeometry( 1, 2, 3 ), 
+				//创建圆形
+				//THREE.CircleGeometry(radius, segments, thetaStart, thetaLength)
+				var cube = new THREE.Mesh( new THREE.CircleGeometry( 3, 8, Math.PI / 6, Math.PI / 3 ), 
 						new THREE.MeshBasicMaterial({ 
-						color: 0xff0000 
+						color: 0xff0000,
+						wireframe: true
 					})
 				);
 				scene.add(cube);

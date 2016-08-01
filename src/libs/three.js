@@ -5,7 +5,6 @@
  */
 
 var THREE = { REVISION: '78' };
-
 //
 
 if ( typeof define === 'function' && define.amd ) {

@@ -1,7 +1,4 @@
-define('home/index', function (require, exports, moudle) {
-	console.log(require.resolve('home/index'));
-	console.log(require.resolve('camrea/index'));
-	console.log(moudle.uri);
+define('webPath/plane/index', function (require, exports, moudle) {
 		var instance = {
 			init: function(){
 				//创建渲染器
@@ -19,10 +16,11 @@ define('home/index', function (require, exports, moudle) {
 				camera.position.set(0, 0, 5);
 				scene.add(camera);
 
-				//创建长方体
-				var cube = new THREE.Mesh( new THREE.CubeGeometry( 1, 2, 3 ), 
+				//创建平面
+				var cube = new THREE.Mesh( new THREE.PlaneGeometry( 1, 2 ), 
 						new THREE.MeshBasicMaterial({ 
-						color: 0xff0000 
+						color: 0xff0000,
+						wireframe: true
 					})
 				);
 				scene.add(cube);

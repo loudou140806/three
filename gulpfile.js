@@ -17,7 +17,8 @@ var
  * 清除bulid目录
  */
 gulp.task('clean', function() {
-    del(['bulid']);
+	console.log('test');
+    del(['build']);
 });
 
 /**
@@ -31,7 +32,7 @@ gulp.task('css', function() {
       .pipe(rename(function( path ){
       	path.extname = '.css';
       }))
-      .pipe(gulp.dest('bulid/'));
+      .pipe(gulp.dest('build/'));
       console.log('css编译成功');
 });
 
